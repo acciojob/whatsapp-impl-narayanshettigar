@@ -7,8 +7,16 @@ public class Message {
     private String content;
     private Date timestamp;
 
-    static int count=0;
+    public Message(int id) {
+        this.id = id;
+        this.timestamp = new Date();
+    }
 
+    public Message(int id, String content) {
+        this.id = id;
+        this.content = content;
+        this.timestamp = new Date();
+    }
     public Message(int id, String content, Date timestamp) {
         this.id = id;
         this.content = content;
